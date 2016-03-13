@@ -5,5 +5,6 @@
 
 ### Prerequisite
 
-MinGW >= 5.0.0
-Make >= 3.8.1
+ * MinGW >= 5.0.0
+
+ * Make >= 3.8.1

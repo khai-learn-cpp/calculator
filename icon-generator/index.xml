@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Application's Icon Generator</title>
+	</head>
+	<body>
+		<div>
+			<canvas id="canvas" width="256" height="256">
+				Seriously, your browser needs to support canvas rendering
+			</canvas>
+		</div>
+		<div>
+			<button id="download">Download</button>
+		</div>
+		<script type="text/javascript" src="./main.js"></script>
+	</body>
+</html>

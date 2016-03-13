@@ -36,28 +36,31 @@
 	window.canvas = canvas;
 	var context = window.context = canvas.getContext('2d');
 
-	var fillRect = (color, ...size) => {
+	var fillRect = (color, ...position) => {
 		context.fillStyle = color;
-		context.fillRect(...size);
+		context.fillRect(...position, CELL_SIZE, CELL_SIZE);
 	};
+
+	var fillText = (text, ...position) =>
+		context.fillText(text, ...position, CELL_SIZE, CELL_SIZE);
 
 	var draw = () => {
 
 		/* CELL BACKGROUNDS */
-		fillRect(BACKGROUND_COLOR.ADD, CELL_LOW_BEGIN, CELL_LOW_BEGIN, CELL_SIZE, CELL_SIZE);
-		fillRect(BACKGROUND_COLOR.SUBTRACT, CELL_HIGH_BEGIN, CELL_LOW_BEGIN, CELL_SIZE, CELL_SIZE);
-		fillRect(BACKGROUND_COLOR.MULTIPLY, CELL_LOW_BEGIN, CELL_HIGH_BEGIN, CELL_SIZE, CELL_SIZE);
-		fillRect(BACKGROUND_COLOR.DIVIDE, CELL_HIGH_BEGIN, CELL_HIGH_BEGIN, CELL_SIZE, CELL_SIZE);
+		fillRect(BACKGROUND_COLOR.ADD, CELL_LOW_BEGIN, CELL_LOW_BEGIN);
+		fillRect(BACKGROUND_COLOR.SUBTRACT, CELL_HIGH_BEGIN, CELL_LOW_BEGIN);
+		fillRect(BACKGROUND_COLOR.MULTIPLY, CELL_LOW_BEGIN, CELL_HIGH_BEGIN);
+		fillRect(BACKGROUND_COLOR.DIVIDE, CELL_HIGH_BEGIN, CELL_HIGH_BEGIN);
 
 		/* CELL FOREGROUNDS */
 		context.fillStyle = FOREGROUND_COLOR;
 		context.font = `${CELL_SIZE * 1.23}px consolas`;
 		context.textAlign = 'center';
 		context.textBaseline = 'middle';
-		context.fillText('+', CELL_LOW_MIDDLE, CELL_LOW_MIDDLE, CELL_SIZE, CELL_SIZE);
-		context.fillText('-', CELL_HIGH_MIDDLE, CELL_LOW_MIDDLE, CELL_SIZE, CELL_SIZE);
-		context.fillText('×', CELL_LOW_MIDDLE, CELL_HIGH_MIDDLE, CELL_SIZE, CELL_SIZE);
-		context.fillText('÷', CELL_HIGH_MIDDLE, CELL_HIGH_MIDDLE, CELL_SIZE, CELL_SIZE);
+		fillText('+', CELL_LOW_MIDDLE, CELL_LOW_MIDDLE);
+		fillText('-', CELL_HIGH_MIDDLE, CELL_LOW_MIDDLE);
+		fillText('×', CELL_LOW_MIDDLE, CELL_HIGH_MIDDLE);
+		fillText('÷', CELL_HIGH_MIDDLE, CELL_HIGH_MIDDLE);
 
 	};
 

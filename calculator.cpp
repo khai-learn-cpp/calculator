@@ -1,5 +1,5 @@
 
 #include <windows.h>
-#include "resource.hpp"
+#include "include/resource.hpp"
 
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPCSTR, int);

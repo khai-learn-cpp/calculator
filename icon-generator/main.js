@@ -41,20 +41,17 @@
 
 	var draw = assign(() => {
 
-		// cell: add
+		/* CELL BACKGROUNDS */
 		fillRect(BACKGROUND_COLOR.ADD, CELL_LOW_BEGIN, CELL_LOW_BEGIN, CELL_SIZE, CELL_SIZE);
-		draw.mkAdd();
-
-		// cell: substract
 		fillRect(BACKGROUND_COLOR.SUBTRACT, CELL_HIGH_BEGIN, CELL_LOW_BEGIN, CELL_SIZE, CELL_SIZE);
-		draw.mkSubstract();
-
-		// cell: multiply
 		fillRect(BACKGROUND_COLOR.MULTIPLY, CELL_LOW_BEGIN, CELL_HIGH_BEGIN, CELL_SIZE, CELL_SIZE);
-		draw.mkMultiply();
-
-		// cell: divide
 		fillRect(BACKGROUND_COLOR.DIVIDE, CELL_HIGH_BEGIN, CELL_HIGH_BEGIN, CELL_SIZE, CELL_SIZE);
+
+		/* CELL FOREGROUNDS */
+		context.fillStyle = FOREGROUND_COLOR;
+		draw.mkAdd();
+		draw.mkSubstract();
+		draw.mkMultiply();
 		draw.mkDivide();
 
 	}, {

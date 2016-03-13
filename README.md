@@ -7,10 +7,23 @@
 
  * MinGW >= 5.0.0
 
- * Make >= 3.8.1
+ * Node.js >= 5.0.0, with npm
 
-### Build
+### Build steps
+
+#### Fetch dependencies
 
 ```bash
-make
+npm install
+npm fetch
 ```
+
+#### Run build script
+
+```bash
+npm build
+```
+
+## Run
+
+Go to directory [out](./out) to find executable binaries

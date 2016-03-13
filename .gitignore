@@ -1,0 +1,6 @@
+*.o
+*.exe
+*.obj
+*.res
+quick-test/*
+!quick-test/*.md

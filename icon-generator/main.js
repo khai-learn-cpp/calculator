@@ -39,7 +39,7 @@
 		context.fillRect(...size);
 	};
 
-	var draw = () => {
+	var draw = assign(() => {
 
 		// cell: add
 		fillRect(BACKGROUND_COLOR.ADD, CELL_LOW_BEGIN, CELL_LOW_BEGIN, CELL_SIZE, CELL_SIZE);
@@ -57,9 +57,7 @@
 		fillRect(BACKGROUND_COLOR.DIVIDE, CELL_HIGH_BEGIN, CELL_HIGH_BEGIN, CELL_SIZE, CELL_SIZE);
 		draw.mkDivide();
 
-	};
-
-	assign(draw, {
+	}, {
 		mkAdd() {},
 		mkSubstract() {},
 		mkMultiply() {},

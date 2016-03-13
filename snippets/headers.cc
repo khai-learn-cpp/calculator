@@ -4,6 +4,6 @@
 #define __INC_SNIPPETS_HEADERS
 
 #include <windows.h>
-#include "include/resource.h"
+#include "include/resource.hpp"
 
 #endif /* INCLUDE GUARD */

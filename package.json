@@ -6,7 +6,9 @@
 	"engines": {
 		"node": ">= 5.0.0"
 	},
-	"dependencies": {},
+	"dependencies": {
+		"gnu-compiler-collection-helper": "khai-cpp-packages/gnu-compiler-collection-helper"
+	},
 	"scripts": {
 		"fetch": "node --es-staging ./fetch.js",
 		"build": "node --es-staging ./build.js"

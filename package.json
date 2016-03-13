@@ -1,0 +1,14 @@
+
+{
+	"name": "win32-simple-calculator-builder",
+	"description": "Khải attempting to create a calculator - his very first win32 app",
+	"author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+	"engines": {
+		"node": ">= 5.0.0"
+	},
+	"dependencies": {},
+	"scripts": {
+		"fetch": "node --es-staging ./fetch.js",
+		"build": "node --es-staging ./build.js"
+	}
+}

@@ -1,0 +1,2 @@
+
+int WINAPI WinMain(HINSTANCE, HINSTANCE, LPCSTR, int);

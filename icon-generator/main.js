@@ -25,6 +25,8 @@
 	const CELL_LOW_END = CELL_LOW_BEGIN + CELL_SIZE;
 	const CELL_HIGH_BEGIN = CELL_LOW_END + CELL_SPACING;
 	const CELL_HIGH_END = CELL_HIGH_BEGIN + CELL_SIZE;
+	const CELL_LOW_MIDDLE = (CELL_LOW_BEGIN + CELL_LOW_END) >> 1;
+	const CELL_HIGH_MIDDLE = (CELL_HIGH_BEGIN + CELL_HIGH_END) >> 1;
 
 	setTimeout(() => {
 		canvas.width = canvas.height = CANVAS_SIZE;
@@ -39,7 +41,7 @@
 		context.fillRect(...size);
 	};
 
-	var draw = assign(() => {
+	var draw = () => {
 
 		/* CELL BACKGROUNDS */
 		fillRect(BACKGROUND_COLOR.ADD, CELL_LOW_BEGIN, CELL_LOW_BEGIN, CELL_SIZE, CELL_SIZE);
@@ -49,17 +51,15 @@
 
 		/* CELL FOREGROUNDS */
 		context.fillStyle = FOREGROUND_COLOR;
-		draw.mkAdd();
-		draw.mkSubstract();
-		draw.mkMultiply();
-		draw.mkDivide();
+		context.font = `${CELL_SIZE * 1.23}px consolas`;
+		context.textAlign = 'center';
+		context.textBaseline = 'middle';
+		context.fillText('+', CELL_LOW_MIDDLE, CELL_LOW_MIDDLE, CELL_SIZE, CELL_SIZE);
+		context.fillText('-', CELL_HIGH_MIDDLE, CELL_LOW_MIDDLE, CELL_SIZE, CELL_SIZE);
+		context.fillText('×', CELL_LOW_MIDDLE, CELL_HIGH_MIDDLE, CELL_SIZE, CELL_SIZE);
+		context.fillText('÷', CELL_HIGH_MIDDLE, CELL_HIGH_MIDDLE, CELL_SIZE, CELL_SIZE);
 
-	}, {
-		mkAdd() {},
-		mkSubstract() {},
-		mkMultiply() {},
-		mkDivide() {}
-	});
+	};
 
 	var saveImage = () => {
 		setTimeout(() => anchor.click());

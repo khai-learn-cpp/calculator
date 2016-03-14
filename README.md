@@ -24,14 +24,14 @@ git clone https://github.com/khai-learn-cpp/calculator.git .
 #### Fetch dependencies
 
 ```bash
-npm install
-npm fetch
+node --es-staging ./install.js
+node --es-staging ./fetch.js
 ```
 
 #### Run build script
 
 ```bash
-npm build
+node --es-staging ./build.js
 ```
 
 ## Run

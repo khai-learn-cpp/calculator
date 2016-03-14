@@ -9,9 +9,5 @@
 	"dependencies": {
 		"gnu-compiler-collection-helper": "khai-cpp-packages/gnu-compiler-collection-helper"
 	},
-	"scripts": {
-		"fetch": "node --es-staging ./fetch.js",
-		"build": "node --es-staging ./build.js",
-		"run": "./out/calculator.exe"
-	}
+	"scripts": {}
 }
